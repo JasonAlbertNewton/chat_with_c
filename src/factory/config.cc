@@ -12,7 +12,7 @@ class Global_Config{
         const int length_of_address;
 
     private:
-
+        
 
 };
 

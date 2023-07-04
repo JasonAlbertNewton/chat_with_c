@@ -25,6 +25,15 @@ int create_Socket(int* socket_descriptor)
     return 0;
 } 
 
+//set various option for a socket 
+int set_Socket(int* socket , int* status , int* option_value)
+{
+    if(*socket < 0) return -1;
+    *status = setsockopt(*socket, SOL_SOCKET , SO_REUSEADDR , &option_value , sizeof(option_value));
+    return 0;
+}
+
+int listen_Socket();
 
 #endif
 
@@ -32,7 +41,9 @@ int create_Socket(int* socket_descriptor)
 int main(){
     int *test;
     int temp = create_Socket(test);
-    printf("%d" , *test);
+    int *test1;
+    int set = set_Socket(test , test , test1);
+    //printf("%d , %d" , set , *test1);
     return 0;
 
 }
