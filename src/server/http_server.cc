@@ -15,8 +15,9 @@ class http_server_config
         const int PORT = 8080;
         const int BUFFER_SIZE = INT_MAX;
     public:
-        get_port();
-        get_buffer_size();
+        int get_port() 
+        
+            //get_buffer_size();
 
 
 };
@@ -32,5 +33,6 @@ int main()
     mysock.sin_addr.s_addr = INADDR_ANY;
     mysock.sin_port = htons(PORT);
 
+    
     return 0; 
 }
